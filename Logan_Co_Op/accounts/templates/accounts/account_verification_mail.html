@@ -1,0 +1,9 @@
+{% autoescape off %}
+Greetings! {{user.first_name}} {{user.last_name}}, 
+Kindly follow the below link to confirm your registration.
+
+http://{{domain}}{% url 'activate' uidb64=uid token=token %}
+
+If not done by you, Ignore this mail.
+
+{% endautoescape %}
